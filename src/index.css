@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 35 25% 97%;
+    --foreground: 20 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 15%;
+
+    --primary: 15 55% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 20% 85%;
+    --secondary-foreground: 20 10% 15%;
+
+    --muted: 35 15% 92%;
+    --muted-foreground: 20 8% 45%;
+
+    --accent: 15 55% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 145 30% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 15 55% 55%;
+
+    --radius: 0.75rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(15 55% 55%) 0%, hsl(25 60% 60%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(35 25% 97%) 0%, hsl(35 20% 95%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(35 15% 98%) 100%);
+
+    --shadow-soft: 0 4px 20px -2px hsl(15 55% 55% / 0.12);
+    --shadow-hover: 0 8px 30px -4px hsl(15 55% 55% / 0.2);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 20 15% 10%;
+    --foreground: 35 20% 95%;
+
+    --card: 20 12% 12%;
+    --card-foreground: 35 20% 95%;
+
+    --popover: 20 12% 12%;
+    --popover-foreground: 35 20% 95%;
+
+    --primary: 15 55% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 10% 20%;
+    --secondary-foreground: 35 20% 95%;
+
+    --muted: 20 10% 18%;
+    --muted-foreground: 35 10% 60%;
+
+    --accent: 15 55% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 145 30% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 10% 22%;
+    --input: 20 10% 22%;
+    --ring: 15 55% 55%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(15 55% 45%) 0%, hsl(25 60% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(20 15% 10%) 0%, hsl(20 12% 12%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(20 12% 12%) 0%, hsl(20 10% 15%) 100%);
+
+    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
+    --shadow-hover: 0 8px 30px -4px hsl(15 55% 55% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+   
+    border-style: solid;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
