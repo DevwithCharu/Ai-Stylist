@@ -1,1 +1,1 @@
-# Ai-Stylist
+# Ai-Stylist Prototype
